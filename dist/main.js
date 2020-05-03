@@ -1,17 +1,21 @@
 const menu = document.querySelector('.menu');
 const close = document.querySelector('.close');
-const dropdowan = document.querySelector('.dropdown');
+const dropdown = document.querySelector('.dropdown');
 
-dropdowan.style.display='none';
 
-menu.addEventListener('click',(e){
+dropdown.style.display='none';
+
+menu.addEventListener('click',open);
+function open(e){
     menu.style.display='none';
-    dropdowan.style.display='flex';
-});
+    dropdown.style.display='flex';
+};
 
-close.addEventListener('click',(e)
+close.addEventListener('click',Close);
+function Close(e)
 {
+    
     menu.style.display='flex';
-    dropdowan.style.display='none';
-
-});
+    dropdown.style.display='none';
+    
+};
